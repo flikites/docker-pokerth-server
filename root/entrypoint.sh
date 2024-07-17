@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-/usr/games/pokerth_server
+/pokerth_server
 
 while [ ! -f "/pokerth/.pokerth/log-files/pokerth.pid" ]; do
   echo "PokerTH server not ready..."
