@@ -12,9 +12,9 @@ RUN groupadd --gid $PGID pokerth && \
     chown -R $PUID:$PGID /pokerth
 
 RUN cp -r /usr/share/games/pokerth .
-RUN cp -r /usr/share/doc/pokerth-server ./pokerth/
-RUN cp -r /usr/share/doc/pokerth-data ./pokerth/
-RUN cp -r /usr/games/pokerth_server ./pokerth/
+RUN cp -r /usr/share/doc/pokerth-server /
+RUN cp -r /usr/share/doc/pokerth-data /
+RUN cp -r /usr/games/pokerth_server /
 COPY config.xml ./.pokerth/
 
 
