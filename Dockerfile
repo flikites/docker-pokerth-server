@@ -11,6 +11,14 @@ RUN groupadd --gid $PGID pokerth && \
     useradd --uid $PUID --gid $PGID -s /usr/bin/bash -d /pokerth pokerth && \
     chown -R $PUID:$PGID /pokerth
 
+RUN cp -r /usr/share/games/pokerth .
+RUN cp -r /usr/share/doc/pokerth-server ./pokerth/
+RUN cp -r /usr/share/doc/pokerth-data ./pokerth/
+RUN cp -r /usr/games/pokerth_server ./pokerth/
+COPY config.xml ./.pokerth/
+
+
+
 EXPOSE 7234
 
 USER pokerth
